@@ -3,11 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TypeScript!</title>
-    
+    <link rel="stylesheet" href="./styles.css">    
+    <title>An Undetermined TypeScript Project!</title>
 </head>
 <body>
-    <h1>Welcome to TypeScript!</h1>
+    <h1>A Little Baby TypeScript Project!</h1>
+    <main class="wrapper">
+        <ul class="item-list">
+        </ul>
+        <div>
+            <form class="new-item">
+                <div class="field">
+                    <label for="type">Type:</label>
+                    <select id="type">
+                        <option value="debit">Debit</option>
+                        <option value="credit">Credit</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="location">Location:</label>
+                    <input type="text" id="location">
+                </div>
+                <div class="field">
+                    <label for="amount">Amount:</label>
+                    <input type="number" id="amount">
+                </div>
+                <button>Log</button>
+            </form>
+        </div>
+    </main>
     <script src="/app.js"></script>
 </body>
 </html>

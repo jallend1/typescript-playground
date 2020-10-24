@@ -1,3 +1,17 @@
 h1 {
   text-align: center;
 }
+
+.wrapper {
+  max-width: 80%;
+}
+
+.new-item {
+  padding: 2em;
+  display: flex;
+  justify-content: space-around;
+}
+
+.field {
+  display: inline-block;
+}
