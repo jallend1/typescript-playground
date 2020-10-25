@@ -1,14 +1,35 @@
-const inputs = document.querySelectorAll('input');
-console.log(inputs);
+type StringOrNumber = string | number;   
 
-const add = (a: number, b:number, c: number | string = 'jason') => {
+let functionSignature: (a: number, b: number, c?: string) => number;
+
+functionSignature = (numOne: number, numTwo: number, action?: string) => {
+    if(action === 'add'){
+        return numOne + numTwo;
+    }
+    else{
+        return numOne - numTwo;
+    }
+}
+
+console.log(functionSignature(5, 100, 'add'));
+console.log(functionSignature(1000,1));
+
+const adder = (a: number, b:number, c: StringOrNumber = 'jason') => {
     console.log(a + b);
     console.log(c)
 }
 
-const subtract = (initial: number, newNumber: number, thirdNumber?: number) => {
+adder(1, 5);
+adder(1, 5, 'jack');
+
+const subtracter = (initial: number, newNumber: number, thirdNumber?: number) => {
     thirdNumber ? console.log(initial - newNumber - thirdNumber) : console.log(initial - newNumber);
 }
-add(1, 5);
-add(1, 5, 'jack')
-subtract(5, 2, 10)
+
+subtracter(5, 2, 10);
+
+const sayHello = (greeting: StringOrNumber) => {
+    console.log(greeting);
+}
+
+sayHello('hi')
